@@ -19,3 +19,10 @@ Scenario: Graphical visualization of averages
   Then bar charts with the class information are generated
   And the charts are displayed
   And I remain on the same screen
+
+Scenario: Detailed display of metrics per class
+  Given I am on the "Comparison visualization" screen
+  When I choose "Detailed view"
+  And I choose "ESS1"
+  Then detailed statistics for "ESS1" are shown
+  And I remain on the same screen
