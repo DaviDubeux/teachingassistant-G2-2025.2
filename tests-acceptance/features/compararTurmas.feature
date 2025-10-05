@@ -25,4 +25,5 @@ Scenario: Detailed display of metrics per class
   When I choose "Detailed view"
   And I choose "ESS1"
   Then detailed statistics for "ESS1" are shown
+  And other classes detailed views are still available
   And I remain on the same screen
