@@ -8,7 +8,7 @@ Scenario: Selecting classes for comparisson
   Given I'm in the "Classes comparisson" screen
   And there are no selected classes
   When I choose "ESS1"
-  And I chosse “ESS2”
+  And I choose “ESS2”
   And I confirm the operation
   Then I go to the screen “Comparisson visualiation"
 
