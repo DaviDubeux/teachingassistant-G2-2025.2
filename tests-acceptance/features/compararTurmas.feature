@@ -26,3 +26,11 @@ Scenario: Detailed display of metrics per class
   And I choose "ESS1"
   Then detailed statistics for "ESS1" are shown
   And I remain on the same screen
+
+Scenario: Report generation/export
+  Given I am on the "Comparison visualization" screen
+  And no report has been generated
+  When I choose "generate report"
+  Then a report with the metrics is generated
+  And the report is made available for download
+  And I remain on the same screen
