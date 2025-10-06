@@ -44,6 +44,14 @@ Scenario: Removing a class from comparison
   And the comparison visualization updates accordingly
   And I remain on the same screen
 
+Scenario: Adding a class to comparison
+  Given I am on the "Comparison visualization" screen
+  And "ESS1" and "ESS2" are selected for comparison
+  When I choose to add "ESS3" to the selection
+  Then "ESS1", "ESS2", and "ESS3" are selected for comparison
+  And the comparison visualization updates accordingly
+  And I remain on the same screen
+
 Scenario: Handling empty class selection
   Given I am on the "Classes comparisson" screen
   And no classes are selected
