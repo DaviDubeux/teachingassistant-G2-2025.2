@@ -43,3 +43,11 @@ Scenario: Removing a class from comparison
   Then only "ESS1" and "ESS3" remain selected
   And the comparison visualization updates accordingly
   And I remain on the same screen
+
+Scenario: Handling comparison with no classes selected
+  Given I am on the "Comparison visualization" screen
+  And no classes are selected for comparison
+  When I attempt to generate a comparison
+  Then a message is displayed indicating that at least two classes must be selected
+  And no charts or reports are generated
+  And I remain on the same screen
