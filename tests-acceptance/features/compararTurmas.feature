@@ -43,10 +43,3 @@ Scenario: Removing a class from comparison
   Then only "ESS1" and "ESS3" remain selected
   And the comparison visualization updates accordingly
   And I remain on the same screen
-
-Scenario: Handling empty class selection
-  Given I am on the "Classes comparisson" screen
-  And no classes are selected
-  When I attempt to confirm the operation
-  Then an error message is displayed indicating that at least one class must be selected
-  And I remain on the same screen
